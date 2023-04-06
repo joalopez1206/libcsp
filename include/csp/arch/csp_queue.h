@@ -7,8 +7,8 @@
 #include <csp_autoconfig.h>
 
 #if (CSP_FREERTOS)
-#include <FreeRTOS.h>
-#include <queue.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/queue.h>
 #endif
 
 #define CSP_QUEUE_OK 0

@@ -11,8 +11,8 @@
     #include <semaphore.h>
     typedef sem_t csp_bin_sem_t;
 #elif (CSP_FREERTOS)
-    #include <FreeRTOS.h>
-    #include <task.h>
+    #include <freertos/FreeRTOS.h>
+    #include <freertos/task.h>
     typedef TaskHandle_t csp_bin_sem_t;
 #elif (CSP_ZEPHYR)
     #include <zephyr.h>
