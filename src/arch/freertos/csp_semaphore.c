@@ -1,7 +1,7 @@
 #include "../../csp_semaphore.h"
 
-#include <FreeRTOS.h>
-#include <semphr.h>
+#include <freetos/FreeRTOS.h>
+#include <freetos/semphr.h>
 
 #include <csp/csp_debug.h>
 #include <csp/csp.h>

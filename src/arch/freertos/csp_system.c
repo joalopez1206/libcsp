@@ -1,7 +1,7 @@
 #include <csp/csp_hooks.h>
 
-#include <FreeRTOS.h>
-#include <task.h>
+#include <freertos/FreeRTOS.h>
+#include <freertos/task.h>
 
 __attribute__((weak)) uint32_t csp_memfree_hook(void) {
 #if (configSUPPORT_DYNAMIC_ALLOCATION == 1)
