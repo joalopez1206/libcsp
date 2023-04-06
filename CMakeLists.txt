@@ -1,6 +1,6 @@
 project(CSP)
 cmake_minimum_required(VERSION 3.20)
-set (CMAKE_SYSTEM_NAME STREQUAL "FreeRTOS")
+set (CMAKE_SYSTEM_NAME "FreeRTOS")
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
   set(BUILD_SHARED_LIBS OFF)
 endif()
