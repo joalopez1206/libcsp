@@ -2,7 +2,7 @@ project(CSP)
 cmake_minimum_required(VERSION 3.20)
 
 if(CMAKE_SYSTEM_NAME STREQUAL "Linux")
-  set(BUILD_SHARED_LIBS ON)
+  set(BUILD_SHARED_LIBS OFF)
 endif()
 
 add_library(libcsp)
