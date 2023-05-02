@@ -13,15 +13,17 @@ if(NOT CMAKE_SYSTEM_NAME STREQUAL "Zephyr")
 endif()
 
 if(LIBZMQ_FOUND)
+  message(STATUS "libzmq3 found! linking...")
   add_library(if_zmq OBJECT csp_if_zmqhub.c)
   target_include_directories(if_zmq PRIVATE
     ${csp_inc}
     ${LIBZMQ_INCLUDE_DIRS})
   target_link_libraries(if_zmq PRIVATE ${LIBZMQ_LIBRARIES})
-  target_link_libraries(libcsp PRIVATE if_zmq)
+  target_link_libraries(libcsp PUBLIC if_zmq)
   if(BUILD_SHARED_LIBS)
-    set_property(TARGET if_zmq PROPERTY POSITION_INDEPENDENT_CODE ON)
+    #set_property(TARGET if_zmq PROPERTY POSITION_INDEPENDENT_CODE OFF)
   endif()
+  message(STATUS "linked libzmq3")
 endif()
 
 if(HAVE_SYS_SOCKET_H AND HAVE_ARPA_INET_H)
